@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>the rooms</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
+    <link href="css/normalize.css"  th:href="@{css/normalize.css}"  rel="stylesheet"/>
+    <link href="../static/css/style.css" th:href="@{css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<nav>
+    <a href="index.html"  th:href="@{/}"><img id="back" src="../static/images/back-arrow.png" th:src="@{/images/back-arrow.png}" alt=""/></a>
+    <h1>the rooms</h1>
+    <a href="counter.html"><img class="hours" src="../static/images/hours.png" alt="" th:src="@{images/hours.png}"/></a>
+</nav>
+<section th:object="${group}" class="meeting-section">
+    <h3 th:text="*{name}">Meeting Name</h3>
+    <h1 class="day-time" th:text="*{time}">Day at --:--am</h1>
+    <h5 th:text="'Type: '+*{type}">Type of Meeting</h5>
+    <h4 th:text="'Address: '+*{location}">Meeting Location <br/> 1234 Main St. <br/> City, State Zip Code</h4>
+    <h1 th:text="'Miles: '+*{miles}">0.0 Miles</h1>
+</section>
+<div th:object="${group}" class="go-btn" id="go-btn">
+    <a th:href="@{'https://www.google.com/maps/place/'+${group.getFormattedAdrress()} +'/@'+${group.latitude}+','+${group.longitude}}" >
+        <h1>Go!</h1></a>
+</div>
+<div class="fav-btn" id="fav-btn">
+    <img src="../static/images/heart2.png" th:src="@{/images/heart2.png}" alt=""/>
+    <h2>Favorite</h2>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../static/js/script.js" th:src="@{js/script.js}"></script>
+</body>
+</html>

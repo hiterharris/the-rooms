@@ -1,0 +1,159 @@
+@import "partials/_meeting.scss";
+@import "partials/_counter.scss";
+
+body {
+  font-family: 'Asap', sans-serif;
+  background:#F8F9FE;
+  margin:0;
+}
+a {
+  text-decoration:none;
+  color:black;
+}
+// -------- Nav Bar ----------
+nav {
+  background: #276AAD;
+  overflow:hidden;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom: 2px solid white;
+  position:fixed;
+  h1 {
+    font-weight:300;
+    color:white;
+    margin: 2%;
+  }
+  img {
+    width:7%;
+    margin:3%;
+  }
+  .back {
+    visibility:hidden;
+  }
+
+}
+.logo {
+  display:flex;
+  justify-content: center;
+  margin:5% 30%;
+  width:40%;
+}
+
+.header {
+  background: #276AAD;
+  position:fixed;
+  top:7%;
+  width:100%;
+}
+
+// ------- Quick Find Button -------
+.quick-btn {
+  width:60%;
+  height:8vh;
+  background:#276AAD;
+  margin:5% auto;
+  border: 2px solid white;
+  border-radius:2px;
+  display:flex;
+  justify-content: space-around;
+  align-items:center;
+
+  h1 {
+    font-weight:300;
+    color:white;
+  }
+  img {
+    height:50%;
+  }
+}
+.quick-info {
+  visibility: hidden;
+  color:#276AAD;
+  text-align: center;
+  margin:0 auto;
+  margin-top:10%;
+  h2 {
+    margin:0;
+  }
+}
+
+// ----- Day Selector ----------
+.selector {
+  padding-top:40%;
+  display:flex;
+  justify-content: space-around;
+  h2 {
+    font-weight: 400;
+    border-bottom:3px solid #F8F9FE;
+    line-height: 0;
+  }
+  .day {
+    border-bottom:3px solid transparent;
+  }
+}
+
+// -------- Meeting List (homepage) -------
+.meeting {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  margin:2% 2%;
+  border-radius:2px;
+  box-shadow: 1px 1px 10px #888888;
+}
+.info {
+  width:50%;
+  margin:2%;
+  line-height: 0;
+  text-align: center;
+    p, h5 {
+      font-weight: 300;
+      word-wrap: break-word;
+  }
+  p {
+    line-height:0;
+  }
+}
+.time-distance {
+  background:#276AAD;
+  width:25%;
+  height:10vh;
+  border-radius:2px;
+  text-align: center;
+  color:white;
+  line-height: 0;
+  h3, h5 {
+    font-weight: 300;
+  }
+}
+
+@media (min-width:767px) {
+  nav img {
+    width:3%;
+  }
+  .quick-btn {
+    display:flex;
+    justify-content: center;
+    width:30%;
+    height:6vh;
+    img {
+      margin-left:3%;
+    }
+    h1 {
+      margin-right:3%;
+    }
+  }
+  .selector {
+    padding-top: 20%;
+  }
+}
+
+@media (min-width:1440px) {
+  .header {
+    top:10%;
+  }
+  .selector {
+    padding-top:18%;
+  }
+}

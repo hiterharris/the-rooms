@@ -1,0 +1,66 @@
+body {
+  background:#F8F9FE;
+}
+nav {
+  top:0px;
+  a {
+    width:10%;
+  }
+  a img{
+    width:75%;
+    margin:20%;
+  }
+}
+.hamburger {
+  visibility:hidden;
+}
+.counter {
+  width:10%;
+}
+.meeting-section {
+  margin-top:15%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'ASAP', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+.day-time {
+  color:#276AAD;
+}
+.go-btn {
+  width:60%;
+  height:10vh;
+  background:#276AAD;
+  margin:10% auto;
+  border-radius:10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height:50%;
+  }
+  a {
+    color:white;
+    font-family: 'ASAP', sans-serif;
+  }
+}
+.fav-btn {
+  width:50%;
+  height:8vh;
+  margin:10% auto;
+  border:1px solid black;
+  border-radius:10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height:50%;
+    margin:5%;
+  }
+}
+@media (min-width:767px) {
+  nav a img {
+    width:30%;
+  }
+}
